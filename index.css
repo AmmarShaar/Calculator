@@ -1,0 +1,72 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    font-weight: normal;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, rgb(69, 67, 189),rgb(74, 74, 110));
+}
+
+.calculater-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px,auto) repeat(5, 100px);
+}
+
+.calculater-grid button{
+    cursor: pointer;
+    font-size: 2em;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.calculater-grid button:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.span-two {
+    grid-column: span 2;
+    /* color: rgb(236, 216, 101); */
+    font-weight: bold;
+}
+
+div.span-three {
+    cursor: pointer;
+    font-size: 2.5em;
+    border: 1px solid white;
+    outline: none;
+    grid-column: span 2;
+    background-color: rgb(236, 216, 101);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-weight: bold;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5em;
+}
+.output .current-operand {
+    color: white;
+    font-size: 2.5em;
+}
